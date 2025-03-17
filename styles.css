@@ -115,4 +115,11 @@ img {
         width: calc(460px * 0.8);
         height: calc(460px * 0.8);
     }
+
+    .border {
+        width: calc(100vw - 20px);
+        height: calc(100vh - 20px);
+        border: solid #15ff00 1px;
+    }
+    
 }
