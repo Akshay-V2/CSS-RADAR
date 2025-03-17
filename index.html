@@ -21,6 +21,38 @@
         </div>
     </div>
 
+    <div class="button instrument-serif-regular" id="title" onclick="handleClick('code')">pure css radar</div>
+
+    <div class="links">
+        <div class="button instrument-serif-regular" onclick="handleClick('code')">code</div>
+        <div class="button instrument-serif-regular" onclick="randomize()">randomize</div>
+        <div class="button instrument-serif-regular" onclick="handleClick('cool')">more cool stuff</div>
+    </div>
+
     <div class="border"></div>
+
+    <script>
+        let selectedColor = '#15ff00';
+        let index = 0;
+        const colors = ['#15ff00', '#003CFF', '#FFA600', '#FF0000', '#66FF00', '#00AEFF', '#BF00FF', '#FF00C8', '#00FFAA'];
+        let len = colors.length;
+        function randomize() {
+            if (index >= len - 1) {
+                index = 0;
+            } else {
+                index++;
+            };
+            selectedColor = colors[index];
+            document.documentElement.style.setProperty('--color', selectedColor);
+        }
+
+        function handleClick(mode) {
+            if (mode === 'code') {
+                window.open('https://github.com/Akshay-V2/CSS-RADAR', '_blank');
+            } else if (mode === 'cool') {
+                window.open('https://bento.me/akshdzn', '_blank');
+            };
+        }
+    </script>
 </body>
 </html>

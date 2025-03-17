@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+    --color: #15ff00;
+}
+
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  .instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+
 body {
     background-color: black;
     margin: 0;
@@ -79,17 +102,58 @@ img {
     position: absolute;
     width: 460px;
     height: 460px;
-    background-color: #15ff00;
+    background-color: var(--color);
     z-index: 100;
     mix-blend-mode: overlay;
 }
 
-/* page css */
-
 .border {
     width: calc(100vw - 80px);
     height: calc(100vh - 80px);
-    border: solid #15ff00 1px;
+    border: solid var(--color) 1px;
+}
+
+#title {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+}
+
+@keyframes button {
+    0% {
+        padding-left: 30px;
+        padding-right: 30px;
+    } 100% {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.button {
+    color: var(--color);
+    font-size: 24px;
+    background-color: black;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: fit-content;
+    border: solid 7px black;
+    transition: all ease-in-out 300ms;
+}
+
+.button:hover {
+    animation: button 300ms ease-out;
+    background-color: var(--color);
+    color: black;
+}
+
+.links {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 300ms;
 }
 
 @media (max-width: 768px) {
@@ -119,7 +183,7 @@ img {
     .border {
         width: calc(100vw - 20px);
         height: calc(100vh - 20px);
-        border: solid #15ff00 1px;
+        border: solid var(--color) 1px;
     }
     
 }
